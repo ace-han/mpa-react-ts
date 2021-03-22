@@ -1,0 +1,14 @@
+{
+  "vsintellicode.python.completionsEnabled": true,
+  "python.formatting.provider": "black",
+  "editor.formatOnSave": true,
+  "python.analysis.memory.keepLibraryAst": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": [
+    "--ignore=H101,H238,H301,H306,W503,D100,D101,D102,D103,D104,D105,D106,D107,D203,D213,D407,D202",
+    "--verbose"
+  ],
+  "python.languageServer": "Microsoft",
+  "python.linting.enabled": true,
+}
