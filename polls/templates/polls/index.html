@@ -1,9 +1,31 @@
 {% extends "root.html" %}
+{% load static %}
 
 {% block title %}
 <title>Polls</title>
 {% endblock %}
 
 {% block body %}
-<div>polls body</div>
+<div>
+  <div class="container">
+    <div id="example">
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+{{ block.super }}
+<script src="{% static 'Example.js' %}"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    ReactDOM.render(
+      React.createElement(
+        Example.default, // note - using .default here as this is how the global is set up
+        {
+          className: 'example-content'
+        }
+      ), document.getElementById('example'));
+  });
+</script>
 {% endblock %}
