@@ -14,6 +14,9 @@ module.exports = {
     root: __dirname,
   },
   use: [
+    // below each element is a middleware in neutrino
+    // refer to
+    // https://neutrinojs.org/middleware/
     typescript({ tsconfig: {
       compilerOptions: {
         strict: true,
@@ -45,7 +48,11 @@ module.exports = {
     //  
     // https://www.npmjs.com/package/webpack-node-externals
     // https://webpack.js.org/configuration/externals/#externals
-    neutrino => {
+
+    // later middleware overrides the former ones
+    // https://neutrinojs.org/api/#config
+    // https://neutrinojs.org/creating-presets/#configuring
+    (neutrino) => {
       neutrino.config.when(process.env.NODE_ENV === 'production', config => {
         config.externals({ react: 'React' });
       });
