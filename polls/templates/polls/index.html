@@ -16,6 +16,9 @@
 
 {% block extra_scripts %}
 {{ block.super }}
+
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 <script src="{% static 'Example.js' %}"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
