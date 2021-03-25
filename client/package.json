@@ -18,19 +18,20 @@
   "author": "Ace Han",
   "license": "MIT",
   "dependencies": {
+    "@headlessui/react": "^0.3.1",
     "core-js": "^3.9.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "@neutrinojs/eslint": "^9.5.0",
     "@neutrinojs/airbnb": "^9.5.0",
+    "@neutrinojs/eslint": "^9.5.0",
     "@neutrinojs/jest": "^9.5.0",
+    "@neutrinojs/react-components": "^9.5.0",
     "@testing-library/react": "^11.2.5",
     "@types/jest": "^26.0.21",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.2",
-    "@neutrinojs/react-components": "^9.5.0",
     "eslint": "^7.22.0",
     "eslint-plugin-react": "^7.22.0",
     "jest": "^26.6.3",

@@ -17,22 +17,33 @@ module.exports = {
     // below each element is a middleware in neutrino
     // refer to
     // https://neutrinojs.org/middleware/
-    typescript({ tsconfig: {
-      compilerOptions: {
-        strict: true,
-        allowJs: true,
-      },
-    } }),
+    typescript({
+      tsconfig: {
+        compilerOptions: {
+          strict: true,
+          allowJs: true,
+        },
+      }
+    }),
     typescriptLint(),
-    eslint({ eslint: { baseConfig: { extends: [
-      'eslint:recommended',
-      'plugin:react/recommended',
-    ] } } }),
+    eslint({
+      eslint: {
+        baseConfig: {
+          extends: [
+            'eslint:recommended',
+            'plugin:react/recommended',
+          ]
+        }
+      }
+    }),
     reactComponents({
       // Change options related to starting a webpack-dev-server
       // https://webpack.js.org/configuration/dev-server/#devserverproxy
       // Proxy requests to /api to Wagtail local Django server
       // devServer: { proxy: { '/api': 'http://localhost:8000' } },
+
+      // this flag disables webpack-node-externals entirely
+      externals: false
     }),
     jest(),
     //
