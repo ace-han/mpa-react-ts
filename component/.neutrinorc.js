@@ -65,7 +65,10 @@ module.exports = {
     // https://neutrinojs.org/creating-presets/#configuring
     (neutrino) => {
       neutrino.config.when(process.env.NODE_ENV === 'production', config => {
-        config.externals({ react: 'React' });
+        config.externals({ 
+          react: 'React',
+          'react-dom': 'ReactDOM',
+        });
       });
     },
   ],

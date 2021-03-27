@@ -7,7 +7,7 @@ import React, { FC, useState } from 'react';
 const Example: FC = () => {
   // Declare a new state variable, which we'll call "count"
   const [count, setCount] = useState(0);
-  const message = `Hello there, You clicked ${count} times`;
+  const message = `Hello component, You clicked ${count} times`;
 
   return (
     <div>
