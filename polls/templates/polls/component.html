@@ -8,7 +8,13 @@
 {% block body %}
 <div>
   <div class="container">
-    <div id="root">
+    <div id="listbox">
+    </div>
+    <p />
+    <p />
+    <p />
+    <p />
+    <div id="menu">
     </div>
   </div>
 </div>
@@ -25,12 +31,19 @@
 <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
 <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 <script src="{% static 'ListBox.js' %}"></script>
+<script src="{% static 'Menu.js' %}"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     ReactDOM.render(
       React.createElement(
         ListBox.default, // note - using .default here as this is how the global is set up
-      ), document.getElementById('root'));
+      ), document.getElementById('listbox')
+    );
+    ReactDOM.render(
+      React.createElement(
+        Menu.default, // note - using .default here as this is how the global is set up
+      ), document.getElementById('menu')
+    );
   });
 </script>
 {% endblock %}

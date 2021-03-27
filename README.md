@@ -77,12 +77,19 @@ npm run build:watch
     although I should exclude stuff from `@headlessui/react` 
 -->
 <script src="{% static 'ListBox.js' %}"></script>
+<script src="{% static 'Menu.js' %}"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     ReactDOM.render(
       React.createElement(
         ListBox.default, // note - using .default here as this is how the global is set up
-      ), document.getElementById('root'));
+      ), document.getElementById('listbox')
+    );
+    ReactDOM.render(
+      React.createElement(
+        Menu.default, // note - using .default here as this is how the global is set up
+      ), document.getElementById('menu')
+    );
   });
 </script>
 
