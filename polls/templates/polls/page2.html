@@ -1,0 +1,23 @@
+{% extends "root.html" %}
+{% load static %}
+
+{% block title %}
+<title>Polls</title>
+{% endblock %}
+
+{% block body %}
+<div>
+  <div class="container">
+    <div id="root">
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+{{ block.super }}
+
+<script src="{% static 'assets/runtime.670e9f10.js' %}"></script>
+<script src="{% static 'assets/1.1a14701d.js' %}"></script>
+<script src="{% static 'assets/page2.e01dd4fb.js' %}"></script>
+{% endblock %}

@@ -134,4 +134,5 @@ dmypy.json
 # project specific
 db.sqlite3
 
-client/node_modules
+component/node_modules
+web/node_modules
